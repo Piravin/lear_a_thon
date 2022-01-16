@@ -89,5 +89,5 @@ func main() {
 	router.HandleFunc("/", getAllData).Methods("GET")
 	router.HandleFunc("/{code}", getDetails).Methods("GET")
 	http.Handle("/", router)
-	http.ListenAndServe(":80", router)
+	http.ListenAndServe(":", router)
 }
